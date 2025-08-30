@@ -4,21 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="keywords" content="共通キーワード" />
-  <meta name="description" content="共通ディスクリプション" />
-  <title>PACIFIC MALL DEVELOPMENT</title>
+  <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
+  <title><?php echo esc_html( wp_get_document_title() ); ?></title>
   <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/favicon.ico" />
   <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Vollkorn:400i" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/css/styles.css" />
   <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/bundle.js"></script>
+  <?php wp_head(); ?>
 </head>
 <body>
   <div class="container">
     <header id="header">
       <div class="header-inner">
         <div class="logo">
-          <a class="logo-header" href="/pacificmall">
+          <a class="logo-header" href="<?php echo esc_url( home_url() ); ?>">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-main.svg" class="main-logo" alt="PACIFIC MALL DEVELOPMENT" />
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-fixed.svg" class="fixed-logo" alt="PACIFIC MALL DEVELOPMENT" />
           </a>
