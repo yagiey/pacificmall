@@ -2,7 +2,8 @@
     <section class="section-contents" id="shop">
       <div class="wrapper">
 <?php
-$post = get_page_by_path( 'shop' );
+$shop_obj = get_page_by_path( 'shop' );
+$post = $shop_obj;
 setup_postdata( $post );
 $shop_title = get_the_title();
 ?>
@@ -12,7 +13,7 @@ $shop_title = get_the_title();
 <?php wp_reset_postdata(); ?>
         <ul class="shops">
 <?php
-$shop_pages = get_child_pages();
+$shop_pages = get_child_pages( -1, $shop_obj->ID );
 if ( $shop_pages->have_posts() ) :
   while ( $shop_pages->have_posts() ) : $shop_pages->the_post();
 ?>
