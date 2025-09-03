@@ -115,12 +115,13 @@ endif;
 ?>
         </ul>
         <div class="section-buttons">
-          <button type="button" class="button button-ghost" onclick="javascript:location.href = '#';">
-            ニュースリリース一覧を見る
+          <button type="button" class="button button-ghost" onclick="javascript:location.href = '<?php echo esc_url( get_term_link( $term_obj ) ); ?>';">
+            <?php echo $term_obj->name; ?>一覧を見る
           </button>
         </div>
       </div>
     </section>
+
     <section class="section-contents" id="company">
       <div class="wrapper">
         <span class="section-title-en">Corporate Information</span>
