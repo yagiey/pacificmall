@@ -16,11 +16,7 @@ endif;
                       <div class="">
                         <ul class="pagerList">
 <?php
-the_posts_pagination([
-  'mid_size' => 2,
-  'prev_text' => '<',
-  'next_text' => '>',
-]);
+page_navi();
 ?>
                         </ul>
                       </div>
