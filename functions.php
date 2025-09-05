@@ -72,7 +72,7 @@ function get_main_image() {
     elseif ( is_category('news') || is_singular( 'post' ) ):
         return '<img src="' . get_template_directory_uri() . '/assets/images/bg-page-news.jpg" />';
     else:
-        return '<img src="' . get_template_directory_uri() . '/assets/images/bg-page-dummy.png';
+        return '<img src="' . get_template_directory_uri() . '/assets/images/bg-page-dummy.png" />';
     endif;
 }
 
