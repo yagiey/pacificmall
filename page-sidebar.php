@@ -20,12 +20,7 @@ endif;
                         </div>
                       </article>
                     </div>
-                    <div class="content-side">
-                      <div class="side-box">
-                        <aside class="side-inner">
-                        </aside>
-                      </div>
-                    </div>
+<?php get_sidebar(); ?>
                   </div>
                 </div>
               </div>
