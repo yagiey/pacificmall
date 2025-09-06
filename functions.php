@@ -116,3 +116,6 @@ function cms_excerpt_length() {
     return 80;
 }
 add_filter( 'excerpt_mblength', 'cms_excerpt_length' );
+
+// 抜粋機能を固定ページに使えるように設定
+add_post_type_support( 'page', 'excerpt' );
