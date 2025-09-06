@@ -106,3 +106,13 @@ function page_navi() {
         'next_text' => '>',
     ]);
 }
+
+function cms_excerpt_more() {
+    return '...';
+}
+add_filter( 'excerpt_more', 'cms_excerpt_more' );
+
+function cms_excerpt_length() {
+    return 80;
+}
+add_filter( 'excerpt_mblength', 'cms_excerpt_length' );
