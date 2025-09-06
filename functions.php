@@ -119,3 +119,9 @@ add_filter( 'excerpt_mblength', 'cms_excerpt_length' );
 
 // 抜粋機能を固定ページに使えるように設定
 add_post_type_support( 'page', 'excerpt' );
+
+function get_flexible_excerpt( $number ) {
+    $value = get_the_excerpt();
+    $value = wp_trim_words( $value, $number, '...' );
+    return $value;
+}
