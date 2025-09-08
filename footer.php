@@ -31,6 +31,11 @@ wp_nav_menu([
           </nav>
         </div>
       </div>
+      <ul class="sns-navi">
+        <li class="twitter"><a href="https://twitter.com/wordpress_6"></a></li>
+        <li class="facebook"><a href="https://www.facebook.com/wordpress6book"></a></li>
+        <li class="instagram"><a href="https://www.instagram.com/wordpresstext6x"></a></li>
+      </ul>
       <p class="copyright">
         <small class="copyright-text">&#169; 2023 PACIFIC MALL DEVELOPMENT CO., LTD.</small>
       </p>
