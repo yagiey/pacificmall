@@ -75,8 +75,9 @@ add_image_size( 'search', 168, 168, true );
 
 // 各テンプレートごとのメイン画像を表示
 function get_main_image() {
-    if ( is_page() ):
-        return get_the_post_thumbnail( get_queried_object()->ID, 'detail' );
+    if ( is_page() || is_singular( 'daily_contribution' ) ):
+        $attachment_id = get_field( 'main_image' );
+        return wp_get_attachment_image( $attachment_id, 'detail' );
     elseif ( is_category('news') || is_singular( 'post' ) ):
         return '<img src="' . get_template_directory_uri() . '/assets/images/bg-page-news.jpg" />';
     elseif ( is_search() || is_404() ):
