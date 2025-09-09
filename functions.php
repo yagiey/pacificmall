@@ -20,7 +20,7 @@ function get_main_title() {
         return $category_obj[0]->name;
     } elseif ( is_page() ) {
         return get_the_title();
-    } elseif ( is_category() ) {
+    } elseif ( is_category() || is_tax() ) {
         return single_cat_title();
     } elseif ( is_search() ) {
         return 'サイト内検索結果';
