@@ -27,6 +27,10 @@ function get_main_title() {
     } elseif ( is_404() ) {
         return 'ページが見つかりません';
     }
+    elseif ( is_singular( 'daily_contribution' )) {
+        $term_obj = get_the_terms( get_queried_object()->ID, 'event' );
+        return $term_obj[0]->name;
+    }
     return '';
 }
 
