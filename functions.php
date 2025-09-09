@@ -86,6 +86,10 @@ function get_main_image() {
         return '<img src="' . get_template_directory_uri() . '/assets/images/bg-page-news.jpg" />';
     elseif ( is_search() || is_404() ):
         return '<img src="' . get_template_directory_uri() . '/assets/images/bg-page-search.jpg" />';
+    elseif ( is_tax( 'event' )):
+        $term_obj = get_queried_object();
+        $image_id = get_field( 'event_image', $term_obj->taxonomy . '_' . $term_obj->term_id );
+        return wp_get_attachment_image( $image_id, 'detail' );
     else:
         return '<img src="' . get_template_directory_uri() . '/assets/images/bg-page-dummy.png" />';
     endif;
