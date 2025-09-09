@@ -22,7 +22,7 @@ if ( $shop_pages->have_posts() ) :
               <div class="shop-image"><?php the_post_thumbnail( 'common' ); ?></div>
               <div class="shop-body">
                 <p class="name"><?php the_title(); ?></p>
-                <p class="location"></p>
+                <p class="location"><?php the_field( 'location' ); ?></p>
                 <div class="buttonBox">
                   <button type="button" class="seeDetail">MORE</button>
                 </div>
