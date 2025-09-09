@@ -1,6 +1,11 @@
 <article class="article-card">
   <a class="card-link" href="<?php echo get_term_link( $term ); ?>">
-    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-page-dummy.png"></div>
+    <div class="image">
+<?php
+$image_id = get_field( 'event_image', $term->taxonomy . '_' . $term->term_id );
+echo wp_get_attachment_image( $image_id, 'contribution' );
+?>
+    </div>
     <div class="body">
       <time><?php the_time( 'Y.m.d' ); ?></time>
       <p class="title"><?php echo $term->name; ?></p>
